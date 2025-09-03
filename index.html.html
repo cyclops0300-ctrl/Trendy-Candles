@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trendy Candles — Premium Shopping</title>
+  <meta name="description" content="A premium, elegant e‑commerce experience. Modern, fast, and responsive shopping template." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0b0b0b">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TrendyCandles",
+    "url": "https://example.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://example.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="container header__inner">
+      <button class="header__menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <a class="logo" href="#">Trendy<span>Candles</span></a>
+      <form class="search" role="search" aria-label="Site search">
+        <input id="searchInput" type="search" placeholder="Search products…" autocomplete="off" />
+        <button type="button" id="clearSearch" aria-label="Clear search">&times;</button>
+      </form>
+      <nav class="header__nav">
+        <a href="#new">New</a>
+        <a href="#bestsellers">Bestsellers</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" id="openWishlist" aria-label="Open wishlist">
+          <span class="icon">♡</span><span class="count" id="wishCount">0</span>
+        </button>
+        <button class="icon-btn" id="openCart" aria-label="Open cart" aria-haspopup="dialog">
+          <span class="icon">🛒</span><span class="count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" hidden>
+      <a href="#new">New</a>
+      <a href="#bestsellers">Bestsellers</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <h1>Elevate your everyday</h1>
+        <p>Timeless essentials, crafted with care. Discover premium pieces that blend design, durability, and comfort.</p>
+        <div class="hero__cta">
+          <a href="#products" class="btn btn--primary">Shop now</a>
+          <a href="#collections" class="btn btn--ghost">Explore collections</a>
+        </div>
+        <ul class="hero__trust">
+          <li>✓ Free shipping over</li>
+          <li>✓ 07-day returns</li>
+          <li>✓ Secure checkout</li>
+        </ul>
+      </div>
+      <picture class="hero__media" aria-hidden="true">
+        <source srcset="https://images.unsplash.com/photo-1520975922065-24f2a3b3f3e1?q=80&w=1600&auto=format&fit=crop" media="(min-width: 900px)">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1400&auto=format&fit=crop" alt="" />
+      </picture>
+    </div>
+  </section>
+
+  <main id="main">
+    <section id="controls" class="controls container">
+      <div class="control">
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating-desc">Top Rated</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="all">All</option>
+          <option value="apparel">Apparel</option>
+          <option value="home">Home</option>
+          <option value="tech">Tech</option>
+          <option value="beauty">Beauty</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="price">Max Price</label>
+        <input type="range" id="price" min="10" max="500" value="500" />
+        <output id="priceOut">pkr10000</output>
+      </div>
+      <div class="spacer"></div>
+      <button id="resetFilters" class="btn btn--small">Reset</button>
+    </section>
+
+    <section id="products" class="products container" aria-live="polite">
+      <!-- JS injects product cards -->
+    </section>
+
+    <section class="banner container" id="collections">
+      <div class="banner__card">
+        <h3>Monochrome Edit</h3>
+        <p>Minimal silhouettes in black, white and grey.</p>
+        <a href="#" class="btn btn--ghost">Shop the edit</a>
+      </div>
+      <div class="banner__card">
+        <h3>Home Fragrance</h3>
+        <p>Hand‑poured candles and diffusers to set the mood.</p>
+        <a href="#" class="btn btn--ghost">Shop home</a>
+      </div>
+      <div class="banner__card">
+        <h3>Everyday Tech</h3>
+        <p>Wireless audio, chargers, and sleek accessories.</p>
+        <a href="#" class="btn btn--ghost">Shop tech</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="about">
+    <div class="container footer__grid">
+      <div>
+        <a class="logo footer__logo" href="#">Trendy<span>Candles</span></a>
+        <p>Premium goods. Thoughtful design. Built to last.</p>
+      </div>
+      <form class="newsletter" aria-label="Newsletter signup">
+        <label for="email">Join our newsletter</label>
+        <div class="newsletter__row">
+          <input id="email" type="email" placeholder="you@example.com" required />
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+        </div>
+        <small>By subscribing you agree to our <a href="#">Privacy Policy</a>.</small>
+      </form>
+      <nav class="footer__links">
+        <div>
+          <h4>Shop</h4>
+          <a href="#new">New arrivals</a>
+          <a href="#bestsellers">Bestsellers</a>
+          <a href="#collections">Collections</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Sustainability</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <a href="#">Contact</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+        </div>
+      </nav>
+    </div>
+    <div class="container footer__bar">
+      <p>© <span id="year"></span> LuxeMart. All rights reserved.</p>
+      <div class="payments" aria-label="Payment methods">
+        <span aria-hidden="true">VISA</span>
+        <span aria-hidden="true">MASTERCARD</span>
+        <span aria-hidden="true">AMEX</span>
+        <span aria-hidden="true">APPLE PAY</span>
+        <span aria-hidden="true">GOOGLE PAY</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <dialog id="cartDrawer" class="drawer" aria-labelledby="cartTitle">
+    <form method="dialog" class="drawer__backdrop" aria-label="Close cart"></form>
+    <div class="drawer__panel" role="document">
+      <header class="drawer__header">
+        <h2 id="cartTitle">Your Cart</h2>
+        <button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button>
+      </header>
+      <div id="cartItems" class="drawer__content"></div>
+      <footer class="drawer__footer">
+        <div class="totals">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0.00</strong>
+        </div>
+        <button class="btn btn--primary" id="checkoutBtn" type="button">Checkout</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Product Quick View Modal -->
+  <dialog id="quickView" class="modal" aria-labelledby="qvTitle">
+    <form method="dialog" class="modal__backdrop" aria-label="Close"></form>
+    <div class="modal__panel" role="document">
+      <header class="modal__header">
+        <h3 id="qvTitle"></h3>
+        <button class="icon-btn" id="closeQV" aria-label="Close">✕</button>
+      </header>
+      <div class="modal__body" id="qvBody"></div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
